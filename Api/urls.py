@@ -1,11 +1,31 @@
 from django.conf.urls import url
-from django.contrib import admin
-from django.urls import path, include
-from Api.MapApi import views
+from Api.MapApi.views import put_new_map, moveTOnode, trip_initiation, test, insertedgeestimat, update_action_values_for_all_trip, getEdgeInfo, getTripSpeed, getEdgeEstimates, getEdgeAvgSpeed, updateGlobalAvgSpeed, getGlobalAvgSpeed, updateTripRoute, getTripRoute, registration, login, updateEdgeEstmates, getCarData, get_route, update_action_value_car, add_trip, select_av_speed, update_av_speed, select_action_value, update_action_value_db, get_map
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url('put_new_graph/', views.put_new_graph),
-    url('show_all_maps/', views.show_all_maps),
-    url(r'^api-auth/', include('rest_framework.urls')),
+    url('put_new_map/', put_new_map),
+    url('getEdgeEstimates/', getEdgeEstimates),
+    url('getGlobalAvgSpeed/', getGlobalAvgSpeed),
+    url('updateGlobalAvgSpeed/', updateGlobalAvgSpeed),
+    url('getEdgeAvgSpeed/', getEdgeAvgSpeed),
+    url('registration/', registration),
+    url('updateTripRoute/', updateTripRoute),
+    url('login/', login),
+    url('moveTOnode/', moveTOnode),
+    url('trip_initiation/', trip_initiation),
+    url('test/', test),
+    url('insertedgeestimat/', insertedgeestimat),
+    url('updateActionValuesForAllTrip/', update_action_values_for_all_trip),
+    url('getTripSpeed/', getTripSpeed),
+    url('updateEdgeEstmates/', updateEdgeEstmates),
+    url('getCarData/', getCarData),
+     url('getRoute/', get_route),
+    url('updateActionValueCar/', update_action_value_car),
+    url('addTrip/', add_trip),
+    url('getMap/', get_map),
+    url('getTripRoute/', getTripRoute),
+    url('UpdateAvSpeed/', update_av_speed),
+    url('AvSpeed/', select_av_speed),
+    url('getEdgeInfo/', getEdgeInfo),
+    url('SelectActionValue/', select_action_value),
+    url('UpdateActionValueDB/', update_action_value_db),
 ]

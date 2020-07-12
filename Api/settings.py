@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'Api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'maps',
+        'NAME': 'finalversion',
         'USER': 'root',
         'PASSWORD': "12345",
         'HOST': "",
